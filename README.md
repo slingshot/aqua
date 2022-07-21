@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aqua
 
-## Getting Started
+Aqua is a super simple app for masking external services under a custom-branded domain, via full-page embeds and redirects.
 
-First, run the development server:
+Pages like Airtable forms/views, Typeforms, Craft/Notion docs, and anything else on the web that allows iframe embeds can be easily added and served on your custom domain.
+
+The app implements Upstash Redis and the Next.js Edge Runtime in combination with SSG for lightning-fast performance.
+
+## Getting started
+
+To get started, set up your environment with the variables in [.env.template](.env.template), and deploy to any host that supports the Next.JS Edge Runtime.
+
+Deploy with one-click on Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fslingshot%2Faqua%2Ftree%2Fmain&env=REDIS_URL,REDIS_TOKEN,API_TOKEN&envDescription=Add%20your%20Upstash%20URL%20%26%20token%2C%20plus%20a%20long%20randomly-generated%20string%20to%20use%20as%20your%20API%20token.&envLink=https%3A%2F%2Fgithub.com%2Fslingshot%2Faqua)
+
+For local development, just get started as you would with any other Next.js project:
 
 ```bash
-npm run dev
-# or
+yarn
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customization
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Aqua is built to be customized. There are only two steps:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Edit [`aqua.config.ts`](aqua.config.ts) to add your preferred names and a social media share card image
+2. Use a [Favicon Generator](https://favicon-generator.org) and replace all of the images in [`public/logos`](public/logos) as well as the [`public/favicon.ico`](public/favicon.ico) file
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+That's it! Deploy and enjoy.
 
-## Learn More
+## Roadmap
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [x] Basic dynamic embedding
+- [ ] Link creation frontend
+- [ ] Redirects
+- [ ] Per-page social/meta photos
+- [ ] Dynamic script loading for specific providers like Typeform
+- [ ] Custom 404
