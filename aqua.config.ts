@@ -18,5 +18,5 @@ export const aquaConfig = {
      * The default *full URL* for social/meta tag cover images.
      * Should ideally be a <2MB, 16:9 JPG/PNG hosted on a fast CDN.
      */
-    defaultCoverURL: 'https://fast.slingshot.fm/sling/logo/cover-bw-temp.jpg?quality=85&width=1080',
+    defaultCoverURL: 'https://fast.slingshot.fm/sling/static/og.jpg?width=1080&quality=90',
 };
