@@ -3,7 +3,7 @@ import { getPage } from './lib/getPage';
 import { aquaConfig } from './aqua.config';
 import { redis } from './lib/redis';
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
     if (request.nextUrl.pathname === '/') {
         // Proceed to specified redirect route for root/index requests
         return NextResponse.redirect(aquaConfig.rootRedirectURL);

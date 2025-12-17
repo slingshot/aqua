@@ -4,7 +4,7 @@ import { json } from '../../lib/stream-consumers';
 import { setEmbed } from '../../lib/embed/setEmbed';
 
 export const config = {
-    runtime: 'experimental-edge',
+    runtime: 'edge',
 };
 
 export interface CreateQuery extends ParsedUrlQuery {
