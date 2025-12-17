@@ -17,9 +17,19 @@ Deploy with one-click on Vercel:
 For local development, just get started as you would with any other Next.js project:
 
 ```bash
-yarn
-yarn dev
+bun install
+bun dev
 ```
+
+## Admin Panel
+
+Aqua includes a built-in admin panel at `/admin` for managing your embeds. The admin panel allows you to:
+
+- View all existing embeds in a table
+- Create new embeds with a simple form
+- Test embeds by opening them in a new tab
+
+To access the admin panel, enter your `API_TOKEN` as the password.
 
 ## Customization
 
@@ -33,7 +43,7 @@ That's it! Deploy and enjoy.
 ## Roadmap
 
 - [x] Basic dynamic embedding
-- [ ] Link creation frontend
+- [x] Link creation frontend
 - [ ] Redirects
 - [ ] Per-page social/meta photos
 - [ ] Dynamic script loading for specific providers like Typeform

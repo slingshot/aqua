@@ -17,6 +17,7 @@ export async function proxy(request: NextRequest) {
         || request.nextUrl.pathname.includes('embed/')
         || request.nextUrl.pathname.includes('presave/')
         || request.nextUrl.pathname.includes('api/')
+        || request.nextUrl.pathname.includes('admin')
     ) {
         // Proceed immediately with excepted routes
         console.log('Route exception found, serving resource');
